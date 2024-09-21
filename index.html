@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebrare: Design your moment</title>
+    <link rel="shortcut icon" href="./icons8-bird-96.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="inner">
+            <div class="container">
+                
+                    <div class="logo-div">
+                        <img src="/logo.jpeg" alt="">
+                    </div>
+                
+                <div class="user-interactive">
+                    <div class="header">
+                        <div class="logo-parent-dummy">
+                        </div>
+                        <div class="company-details">
+                            <div class="company-name">Celebrare</div>
+                            <div class="newcustomer">
+                                New customer?
+                                <button> Enroll now</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-area">
+                        <h1 class="form-heading">
+                            Welcome Back
+                        </h1>
+                        <div class="form-subheading">
+                            Signin to your celebrare account
+                        </div>
+                        <form action="" class="form">
+                            <input type="text" class="form-input" spellcheck="false" placeholder="User id">
+                            <input type="password" class="form-input" placeholder="password">
+                            <div class="check">
+                                <input type="checkbox" name="remember" id="remember">
+                                <label for="remember">Remember me</label>
+                            </div>
+                            <button class="submit">Login</button>
+                            <div class="other-options">
+                                <span>Forgot User id?</span>
+                                <span>Forgot Password?</span>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="footer">
+                        <div class="footer1">
+                            About Contact Feedback
+                        </div>
+                        <div class="footer2">
+                            Address: C-126 Block B sunrise building , Delhi
+                        </div>
+                    </div>
+                </div>
+                <div class="image-holder">
+                    <div class="img-cover">
+                        <!-- <img src="./poster.jpg" alt=""> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const loginButton = document.querySelector('.submit');
+        const imageHolder = document.querySelector('.image-holder');
+        const userInteractive = document.querySelector('.user-interactive');
+        const logoDiv = document.querySelector('.logo-div');
+        loginButton.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            logoDiv.classList.add('center');
+            userInteractive.classList.add('zero-big-user');
+            imageHolder.classList.add('zero-big-img');
+            // setTimeout(()=>{
+            // },1010)
+            setTimeout(() => {
+                logoDiv.classList.add('zero');
+            }, 1000)
+            setTimeout(() => {
+                imageHolder.classList.remove('zero-big-img');
+            }, 2000)
+            setTimeout(() => {
+                imageHolder.classList.add('position');
+                imageHolder.classList.add('fullscreen');
+            }, 3000)
+            
+            setTimeout(() => {
+                logoDiv.classList.remove('zero');
+            }, 4500)
+            
+            setTimeout(() => {
+                imageHolder.classList.remove('position');
+                userInteractive.classList.remove('display');
+                imageHolder.classList.remove('fullscreen');
+                userInteractive.classList.remove('zero-big-user');
+                logoDiv.classList.remove('center');
+            }, 6000);
+        });
+    </script>
+</body>
+
+</html>
